@@ -1,16 +1,206 @@
 {
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/shopping/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "自营店",
+				"component": true,
+				"usingComponents": {
+					"van-grid": "/wxcomponents/vant/dist/grid/index",
+					"van-grid-item": "/wxcomponents/vant/dist/grid-item/index",
+					"van-tab": "/wxcomponents/vant/dist/tab/index",
+					"van-tabs": "/wxcomponents/vant/dist/tabs/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index"
+				}
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/Map/Map",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "components/tabs/tabs",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MoreDesigners/MoreDesigners",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				// "navigationBarTitleText": "我的",
+				"app-plus": {
+					"titleNView": false
+				},
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/case/index",
+			"style": {
+				"navigationBarTitleText": "案例",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/caseDetails/index",
+			"style": {
+				"navigationBarTitleText": "案例详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/classify/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#ffffff",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/manual/index",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				},
+				"navigationStyle": "custom"
+				// "navigationBarTitleText": "品牌排行榜"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "自营店"
+			}
+		}, {
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": true,
+				"usingComponents": {
+					"van-dropdown-menu": "/wxcomponents/vant/dist/dropdown-menu/index",
+					"van-dropdown-item": "/wxcomponents/vant/dist/dropdown-item/index"
+				}
+			}
+		}, {
+			"path": "components/shop/shop",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+
+		},
+		{
+			"path": "pages/cart/index",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+		    "path" : "pages/mine/order/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的订单"
+		    }
+		    
+		},
+		{
+			"path": "pages/taocandetail/taocandetail",
+			"style": {
+				"navigationBarTitleText": "套餐列表"
 			}
 		}
+		
+		,{
+		    "path" : "pages/goodsdetail/goodsdetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		            "path" : "pages/designersIntroduce/designersIntroduce",
+		            "style" :                                                                                    
+		            {
+		                "navigationBarTitleText": "",
+		                "enablePullDownRefresh": false
+		            }
+		            
+		        }
+
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#000000",
+		"list": [{
+				"pagePath": "pages/shopping/index",
+				"text": "商城",
+				"iconPath": "static/icons/shopping.png",
+				"selectedIconPath": "static/icons/shopping1.png"
+			},
+			{
+				"pagePath": "pages/classify/index",
+				"text": "分类",
+				"iconPath": "static/icons/classify.png",
+				"selectedIconPath": "static/icons/classify1.png"
+			},
+			{
+				"pagePath": "pages/home/index",
+				"text": "首页",
+				"iconPath": "static/icons/home.png",
+				"selectedIconPath": "static/icons/home1.png"
+
+			},
+			{
+				"pagePath": "pages/case/index",
+				"text": "案例",
+				"iconPath": "static/icons/case.png",
+				"selectedIconPath": "static/icons/case1.png"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"text": "我的",
+				"iconPath": "static/icons/mine.png",
+				"selectedIconPath": "static/icons/mine1.png"
+			}
+		]
 	}
+
 }
